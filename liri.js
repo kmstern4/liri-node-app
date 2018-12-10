@@ -26,11 +26,17 @@ inquirer
                     }
                 ]).then(function(answer) {
                     var artist = answer.concert;
+                    if (answer.concert == "") {
+                        artist = "The Rolling Stones";
+                    }
                     axios.get(`https://rest.bandsintown.com/artists/${artist}/events?app_id=codingbootcamp`)
                     .then(function(response) {
-                        console.log(response.data[0].venue.name);
-                        console.log(`${response.data[0].venue.city}, ${response.data[0].venue.region} ${response.data[0].venue.country}`);
-                        console.log(response.data[0].datetime);
+                        for (var i = 0; i < 5; i++) {
+                            console.log(artist);
+                            console.log(response.data[i].venue.name);
+                            console.log(`${response.data[i].venue.city}, ${response.data[i].venue.region} ${response.data[i].venue.country}`);
+                            console.log(moment(response.data[i].datetime).format("MMM Do YYYY"));
+                        };
                     })
                 })
         }
@@ -44,6 +50,9 @@ inquirer
                     }
                 ]).then(function(answer) {
                     var song = answer.song;
+                    if (answer.song == "") {
+                        song = "The Sign + Ace of Base";
+                    };
                     spotify.search({
                         type: "track",
                         query: song
@@ -68,16 +77,19 @@ inquirer
                     }
                 ]).then(function(answer) {
                     var movie = answer.movie;
+                    if (answer.movie == "") {
+                        movie = "Mr Nobody";
+                    };
                     axios.get("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy")
                     .then(function(response) {
-                        console.log(response.data.Title);
-                        console.log(response.data.Year);
-                        console.log(response.data.imdbRating);
-                        console.log(response.data.Ratings[1].Value);
-                        console.log(response.data.Country);
-                        console.log(response.data.Language);
-                        console.log(response.data.Plot);
-                        console.log(response.data.Actors);
+                        console.log(`Title: ${response.data.Title}`);
+                        console.log(`Year Released: ${response.data.Year}`);
+                        console.log(`IMDB Rating: ${response.data.imdbRating}`);
+                        console.log(`Rotten Tomatoes Rating: ${response.data.Ratings[1].Value}`);
+                        console.log(`Country: ${response.data.Country}`);
+                        console.log(`Language(s): ${response.data.Language}`);
+                        console.log(`Plot Summary: ${response.data.Plot}`);
+                        console.log(`Actors: ${response.data.Actors}`);
                     })
                 })
         }
