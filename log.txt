@@ -1,6 +1,10 @@
 ----------------------------------------------------
 Upcoming concerts for Odesza
 ----------------------------------------------------
+Venue: HiJinx Festival
+Location: Philadelphia, PA United States
+Date: Dec 29th 2018
+
 Venue: The Novo
 Location: Los Angeles, CA United States
 Date: Dec 30th 2018
@@ -8,10 +12,6 @@ Date: Dec 30th 2018
 Venue: The Warfield
 Location: San Francisco, CA United States
 Date: Dec 31st 2018
-
-Venue: HiJinx Festival
-Location: Philadelphia, PA United States
-Date: Dec 29th 2018
 
 Venue: AFAS Live
 Location: Amsterdam,  Netherlands
@@ -24,21 +24,21 @@ Date: Jan 24th 2019
 ----------------------------------------------------
 Upcoming concerts for The Rolling Stones
 ----------------------------------------------------
-Venue: Hard Rock Stadium
-Location: Miami Gardens, FL United States
-Date: Apr 20th 2019
-
 Venue: TIAA Bank Field
 Location: Jacksonville, FL United States
 Date: Apr 24th 2019
 
-Venue: NRG Arena
-Location: Houston, TX United States
-Date: Apr 28th 2019
+Venue: Hard Rock Stadium
+Location: Miami Gardens, FL United States
+Date: Apr 20th 2019
 
 Venue: State Farm Stadium
 Location: Glendale, AZ United States
 Date: May 7th 2019
+
+Venue: NRG Arena
+Location: Houston, TX United States
+Date: Apr 28th 2019
 
 Venue: Rose Bowl Stadium
 Location: Pasadena, CA United States
@@ -47,18 +47,14 @@ Date: May 11th 2019
 ----------------------------------------------------
 Song results for Gold on the Ceiling
 ----------------------------------------------------
-Artist/Band: Sweet
-Song Title: Gold On The Ceiling
-Album: New York Groove Plus
-URL: https://p.scdn.co/mp3-preview/83927bec306dea548a927d39d592b687867430ff?cid=7bc7559c1fb54a99bded8b00751ec97f
 Artist/Band: The Black Keys
 Song Title: Gold On The Ceiling
 Album: Gold On The Ceiling
 URL: https://p.scdn.co/mp3-preview/ff2b18fdee4aa8f3945a03b6adcb2b67e04b9448?cid=7bc7559c1fb54a99bded8b00751ec97f
-Artist/Band: Lionel Richie
-Song Title: Dancing On The Ceiling
-Album: Gold
-URL: null
+Artist/Band: Sweet
+Song Title: Gold On The Ceiling
+Album: New York Groove Plus
+URL: https://p.scdn.co/mp3-preview/83927bec306dea548a927d39d592b687867430ff?cid=7bc7559c1fb54a99bded8b00751ec97f
 Artist/Band: Vitamin String Quartet
 Song Title: Gold on the Ceiling
 Album: Vitamin String Quartet Performs The Black Keys
@@ -67,6 +63,10 @@ Artist/Band: The Black Keys
 Song Title: Gold On The Ceiling
 Album: El Camino
 URL: https://p.scdn.co/mp3-preview/ff2b18fdee4aa8f3945a03b6adcb2b67e04b9448?cid=7bc7559c1fb54a99bded8b00751ec97f
+Artist/Band: Lionel Richie
+Song Title: Dancing On The Ceiling
+Album: Gold
+URL: null
 ----------------------------------------------------
 Song results for The Sign + Ace of Base
 ----------------------------------------------------
