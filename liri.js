@@ -29,10 +29,14 @@ function getConcerts(artist) {
     axios.get(`https://rest.bandsintown.com/artists/${artist}/events?app_id=codingbootcamp`)
     .then(function(response) {
         var data = response.data;
-        console.log(`${linebreak}\nUpcoming concerts for ${artist}\n${linebreak}\n`)
+        var text = `${linebreak}\nUpcoming concerts for ${artist}\n${linebreak}\n`
+        console.log(text);
+        logData(text);
         for (var i = 0; i < 5; i++) {
             var datetime = moment(data[i].datetime).format("MMM Do YYYY");
-            console.log(`Venue: ${data[i].venue.name}\nLocation: ${data[i].venue.city}, ${data[i].venue.region} ${data[i].venue.country}\nDate: ${datetime}\n\n`)
+            var concertData = `Venue: ${data[i].venue.name}\nLocation: ${data[i].venue.city}, ${data[i].venue.region} ${data[i].venue.country}\nDate: ${datetime}\n\n`;
+            console.log(concertData);
+            logData(concertData);
         };
         liriAgain();
     })
@@ -64,13 +68,18 @@ function getSongs(song) {
             return console.log("Error Occurred: " + err);
         }
         var data = data.tracks.items
-        console.log(`Song: ${song}`);
-        console.log(`${linebreak}\nSong results for ${song}\n${linebreak}\n`)
+        var text = `${linebreak}\nSong results for ${song}\n${linebreak}\n`;
+        console.log(text);
+        logData(text);
         if (song == "The Sign + Ace of Base" || song == `"I Want it That Way"`) {
-            console.log(`Artist/Band: ${data[0].artists[0].name}\nSong Title: ${data[0].name}\nAlbum: ${data[0].album.name}\nURL: ${data[0].preview_url}\n`);
+            var songData = `Artist/Band: ${data[0].artists[0].name}\nSong Title: ${data[0].name}\nAlbum: ${data[0].album.name}\nURL: ${data[0].preview_url}\n`;
+            console.log(songData);
+            logData(songData);
         } else {
             for (var i = 0; i < 5; i++) {
-                console.log(`Artist/Band: ${data[i].artists[0].name}\nSong Title: ${data[i].name}\nAlbum: ${data[i].album.name}\nURL: ${data[i].preview_url}\n`);
+                var songData = `Artist/Band: ${data[i].artists[0].name}\nSong Title: ${data[i].name}\nAlbum: ${data[i].album.name}\nURL: ${data[i].preview_url}\n`;
+                console.log(songData);
+                logData(songData);
             };
         }
         liriAgain();
@@ -98,8 +107,11 @@ function getMovies(movie) {
     axios.get("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy")
     .then(function(response) {
         var data = response.data;
-        console.log(`${linebreak}\nMovie information for ${movie}\n${linebreak}\n`);
-        console.log(`Title: ${data.Title}\nYear Released: ${data.Year}\nIMDB Rating: ${data.imdbRating}\nRotten Tomatoes Rating: ${data.Ratings[1].Value}\nCountry: ${data.Country}\nLanguage(s): ${data.Language}\nPlot Summary: ${data.Plot}\nActors: ${data.Actors}\n`);
+        var text = `${linebreak}\nMovie information for ${movie}\n${linebreak}\n`;
+        var movieData = `Title: ${data.Title}\nYear Released: ${data.Year}\nIMDB Rating: ${data.imdbRating}\nRotten Tomatoes Rating: ${data.Ratings[1].Value}\nCountry: ${data.Country}\nLanguage(s): ${data.Language}\nPlot Summary: ${data.Plot}\nActors: ${data.Actors}\n`;
+        console.log(text);
+        console.log(movieData);
+        logData(text + movieData);
         liriAgain();
     })
 };
@@ -171,6 +183,12 @@ function liriAgain() {
         } else {
             return false;
         }
+    })
+}
+
+function logData(text) {
+    fs.appendFile("log.txt", text, function(err) {
+        if (err) throw err;
     })
 }
 
